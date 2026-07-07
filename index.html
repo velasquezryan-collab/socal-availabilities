@@ -252,7 +252,7 @@ const PROPS = [{"id": "arrow", "name": "Arrow Industrial Center", "address": "17
 const LSKEY = "cushmanLE_leads";
 // Google Apps Script Web App URL (deploy from the "SoCal Availabilities - Leads" Google Sheet:
 // Extensions > Apps Script > paste doPost webhook > Deploy > Web app > Anyone > copy /exec URL here).
-const LEADS_WEBHOOK = "PASTE_DEPLOYED_WEB_APP_URL_HERE";
+const LEADS_WEBHOOK = "https://script.google.com/macros/s/AKfycbz9CWjT9NmtrdBWVPxNUBqqRDCpaJGBsHwttp7IMUrveUIWhiYhwAMhViSag0yTd1c/exec";
 
 function avail(p){return p.units.filter(u=>u.status==='available').length;}
 function buildTabs(){
