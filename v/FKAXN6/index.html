@@ -76,7 +76,9 @@
   .prem .n em { color:var(--red); font-style:normal; }
   .prem .t { font-size:15px; line-height:1.55; opacity:.92; }
 
-  table.comps { width:100%; border-collapse:collapse; margin-top:28px; font-size:14px; }
+  .tscroll { margin-top:28px; overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:8px; }
+  .thint { display:none; font-size:12px; color:var(--gray); text-align:center; margin-top:10px; letter-spacing:1px; }
+  table.comps { width:100%; border-collapse:collapse; font-size:14px; }
   table.comps th { background:var(--indigo); color:#fff; text-align:left; padding:11px 14px; letter-spacing:1px; font-size:12px; }
   table.comps td { padding:10px 14px; border-bottom:1px solid var(--line); }
   table.comps tr.subject td { background:#FDECEA; font-weight:700; color:var(--indigo); border-left:4px solid var(--red); }
@@ -147,6 +149,41 @@
   #entry button:hover { background:#c8121f; }
   #entry .ee { display:none; margin-top:14px; color:#FFB3B9; font-size:14px; font-weight:600; }
   #entry .fine { margin-top:26px; font-size:12.5px; opacity:.6; }
+
+  /* ============ PHONE LAYOUT (QR-scan path) ============ */
+  input, button { min-width:0; }
+  @media (max-width:640px){
+    html, body { overflow-x:hidden; }
+    .hero { height:48vh; min-height:340px; }
+    .hero .brand img { height:34px; }
+    .hero .med { width:70px; height:70px; font-size:38px; top:16%; right:6%; border-width:2px; }
+    .hero .hb { padding:0 20px 22px; }
+    .specs .row { gap:8px 20px; font-size:13px; }
+    #gate .inner { padding:40px 20px 48px; }
+    #gate h2 { font-size:23px; }
+    section { padding:44px 0; }
+    h2.sec { font-size:24px; }
+    .ap { padding:22px 18px; }
+    .ap .v { font-size:26px; }
+    .prem { flex-direction:column; text-align:center; gap:12px; padding:26px 20px; }
+    .prem .n { font-size:36px; white-space:normal; }
+    .prem .t { font-size:14px; }
+    table.comps { min-width:620px; font-size:13px; }
+    table.comps th { padding:9px 10px; }
+    table.comps td { padding:9px 10px; }
+    .thint { display:block; }
+    .eqc .v { font-size:29px; }
+    .bb { min-width:0; width:100%; }
+    .brokers { gap:26px; }
+    .close { padding:52px 20px 56px; }
+    .close h2 { font-size:25px; }
+    .close .btns { flex-direction:column; align-items:stretch; max-width:360px; margin-left:auto; margin-right:auto; }
+    .close a.btn { text-align:center; padding:16px 20px; }
+    #entry form { flex-direction:column; }
+    #entry input { width:100%; font-size:20px; }
+    #entry button { padding:16px; }
+    #entry img { height:38px; margin-bottom:26px; }
+  }
 </style>
 </head>
 <body>
@@ -245,10 +282,13 @@
     <section id="compsec">
       <div class="wrap">
         <h2 class="sec">How your building compares</h2>
+        <div class="tscroll">
         <table class="comps" id="comptable">
           <thead><tr><th>PROPERTY</th><th>CITY</th><th>SF</th><th>SALE DATE</th><th>PRICE</th><th>$/SF</th></tr></thead>
           <tbody></tbody>
         </table>
+        </div>
+        <div class="thint">&#8596;&nbsp; Swipe the table to see all columns</div>
         <div class="srcnote" id="compsrc"></div>
       </div>
     </section>
