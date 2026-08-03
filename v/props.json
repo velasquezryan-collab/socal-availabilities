@@ -41,7 +41,7 @@
       "basis_psf": 85,
       "years": 12.9
     },
-    "position": "As the owner and the occupant of this building, you hold options most sellers never see: a straight sale into a supply-constrained owner-user market, a sale-leaseback that unlocks your equity while your operation stays in place, or a relocation strategy timed to your business \u2014 not to the market.",
+    "position": "As the owner and the occupant of this building, you hold options most sellers never see: a straight sale into a supply-constrained owner-user market, a sale-leaseback that unlocks your equity while your operation stays in place, or a relocation strategy timed to your business — not to the market.",
     "comps": [
       {
         "address": "221 Corporate Terrace St.",
@@ -50,7 +50,7 @@
         "sale_date": "Jan 2026",
         "price": 6950000,
         "psf": 278.76,
-        "note": "1988 \u00b7 20' clear \u00b7 owner-user"
+        "note": "1988 · 20' clear · owner-user"
       },
       {
         "address": "255 Glider Cir.",
@@ -59,7 +59,7 @@
         "sale_date": "Apr 2026",
         "price": 5300000,
         "psf": 298.31,
-        "note": "1999 \u00b7 18' clear"
+        "note": "1999 · 18' clear"
       },
       {
         "address": "1215 Graphite Dr.",
@@ -68,7 +68,7 @@
         "sale_date": "Jan 2026",
         "price": 3924960,
         "psf": 370.0,
-        "note": "2001 \u00b7 18' clear \u00b7 owner-user"
+        "note": "2001 · 18' clear · owner-user"
       },
       {
         "address": "2160 S. Hellman Ave.",
@@ -77,7 +77,7 @@
         "sale_date": "Jun 2026",
         "price": 5700000,
         "psf": 308.63,
-        "note": "1987 \u00b7 20' clear \u00b7 owner-user"
+        "note": "1987 · 20' clear · owner-user"
       },
       {
         "address": "960 Grevillea Ct.",
@@ -86,7 +86,7 @@
         "sale_date": "Jan 2026",
         "price": 7700000,
         "psf": 303.93,
-        "note": "1989 \u00b7 22' clear \u00b7 owner-user"
+        "note": "1989 · 22' clear · owner-user"
       },
       {
         "address": "13581 Fifth St.",
@@ -95,7 +95,7 @@
         "sale_date": "Apr 2026",
         "price": 7319600,
         "psf": 270.03,
-        "note": "1988 \u00b7 24' clear \u00b7 owner-user"
+        "note": "1988 · 24' clear · owner-user"
       },
       {
         "address": "7633 Cypress Ave.",
@@ -104,7 +104,7 @@
         "sale_date": "Jun 2026",
         "price": 4400000,
         "psf": 213.53,
-        "note": "1990 \u00b7 16' clear \u00b7 owner-user"
+        "note": "1990 · 16' clear · owner-user"
       },
       {
         "address": "4200 Garner Rd.",
@@ -113,16 +113,142 @@
         "sale_date": "May 2026",
         "price": 8424000,
         "psf": 225.0,
-        "note": "1973 \u00b7 24' clear \u00b7 investor"
+        "note": "1973 · 24' clear · investor"
       }
     ],
     "aerial": "/v/aerials/FKAXN6.jpg",
-    "comps_source": "C&W / CoStar verified sales, Inland Empire 10k\u2013100k SF, trailing 18 months (July 2026 set)",
+    "comps_source": "C&W / CoStar verified sales, Inland Empire 10k–100k SF, trailing 18 months (July 2026 set)",
     "equity": {
       "purchase_date": "September 2013",
       "purchase_psf": 85,
       "purchase_total": 2928250,
       "hold_years": 12.9
+    }
+  },
+  "BYWQ72": {
+    "address": "7929 Lincoln Ave",
+    "city": "Riverside",
+    "state": "CA",
+    "zip": "92504",
+    "submarket": "Riverside/Arlington",
+    "specs": {
+      "rba": 34477,
+      "type": "Warehouse",
+      "built": 1986,
+      "clear": "Single-story concrete/masonry",
+      "loading": "Dock + grade-level loading",
+      "power": "3.04-acre lot · secured yard",
+      "tenancy": "Owner-occupied"
+    },
+    "valuation": {
+      "sales": {
+        "low": 8620000,
+        "high": 8960000,
+        "psf_low": 250,
+        "psf_high": 260,
+        "note": "Based on upgrades"
+      },
+      "income": {
+        "low": 7210000,
+        "high": 7860000,
+        "rent_psf_mo": 1.1,
+        "vacancy_pct": 5,
+        "cap_low": 5.5,
+        "cap_high": 6.0
+      },
+      "reconciled": {
+        "low": 7860000,
+        "high": 8960000
+      },
+      "owner_user_premium": 1260000
+    },
+    "hold": {
+      "purchased": "June 2009",
+      "basis_psf": 64,
+      "years": 17.1
+    },
+    "position": "As the owner and the occupant of this building, you hold options most sellers never see: a straight sale into a supply-constrained owner-user market, a sale-leaseback that unlocks your equity while your operation stays in place, or a relocation strategy timed to your business — not to the market. And with a full 3-acre site behind the building, you own the kind of secured yard space this submarket almost never delivers.",
+    "comps": [
+      {
+        "address": "7633 Cypress Ave.",
+        "city": "Riverside",
+        "sf": 20606,
+        "sale_date": "Jun 2026",
+        "price": 4400000,
+        "psf": 213.53,
+        "note": "1990 · 16' clear · owner-user"
+      },
+      {
+        "address": "4200 Garner Rd.",
+        "city": "Riverside",
+        "sf": 37440,
+        "sale_date": "May 2026",
+        "price": 8424000,
+        "psf": 225.0,
+        "note": "1973 · 24' clear · investor"
+      },
+      {
+        "address": "221 Corporate Terrace St.",
+        "city": "Corona",
+        "sf": 24932,
+        "sale_date": "Jan 2026",
+        "price": 6950000,
+        "psf": 278.76,
+        "note": "1988 · 20' clear · owner-user"
+      },
+      {
+        "address": "255 Glider Cir.",
+        "city": "Corona",
+        "sf": 17767,
+        "sale_date": "Apr 2026",
+        "price": 5300000,
+        "psf": 298.31,
+        "note": "1999 · 18' clear"
+      },
+      {
+        "address": "2160 S. Hellman Ave.",
+        "city": "Ontario",
+        "sf": 18469,
+        "sale_date": "Jun 2026",
+        "price": 5700000,
+        "psf": 308.63,
+        "note": "1987 · 20' clear · owner-user"
+      },
+      {
+        "address": "960 Grevillea Ct.",
+        "city": "Ontario",
+        "sf": 25335,
+        "sale_date": "Jan 2026",
+        "price": 7700000,
+        "psf": 303.93,
+        "note": "1989 · 22' clear · owner-user"
+      },
+      {
+        "address": "13581 Fifth St.",
+        "city": "Chino",
+        "sf": 27107,
+        "sale_date": "Apr 2026",
+        "price": 7319600,
+        "psf": 270.03,
+        "note": "1988 · 24' clear · owner-user"
+      },
+      {
+        "address": "1215 Graphite Dr.",
+        "city": "Corona",
+        "sf": 10608,
+        "sale_date": "Jan 2026",
+        "price": 3924960,
+        "psf": 370.0,
+        "note": "2001 · 18' clear · owner-user"
+      }
+    ],
+    "aerial": "/v/aerials/BYWQ72.jpg",
+    "comps_source": "C&W / CoStar verified sales, Inland Empire 10k–100k SF, trailing 18 months (July 2026 set)",
+    "equity": {
+      "purchase_date": "June 2009",
+      "purchase_psf": 64,
+      "purchase_total": 2220000,
+      "hold_years": 17.1
     }
   }
 }
