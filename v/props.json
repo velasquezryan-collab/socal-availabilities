@@ -28,7 +28,7 @@
     "rent_psf_mo": 1.25,
     "vacancy_pct": 5,
     "cap_low": 5.5,
-    "cap_high": 6.0
+    "cap_high": 6
    },
    "reconciled": {
     "low": 8930000,
@@ -67,7 +67,7 @@
     "sf": 10608,
     "sale_date": "Jan 2026",
     "price": 3924960,
-    "psf": 370.0,
+    "psf": 370,
     "note": "2001 · 18' clear · owner-user"
    },
    {
@@ -112,7 +112,7 @@
     "sf": 37440,
     "sale_date": "May 2026",
     "price": 8424000,
-    "psf": 225.0,
+    "psf": 225,
     "note": "1973 · 24' clear · investor"
    }
   ],
@@ -154,7 +154,7 @@
     "rent_psf_mo": 1.1,
     "vacancy_pct": 5,
     "cap_low": 5.5,
-    "cap_high": 6.0
+    "cap_high": 6
    },
    "reconciled": {
     "low": 7860000,
@@ -184,7 +184,7 @@
     "sf": 37440,
     "sale_date": "May 2026",
     "price": 8424000,
-    "psf": 225.0,
+    "psf": 225,
     "note": "1973 · 24' clear · investor"
    },
    {
@@ -238,7 +238,7 @@
     "sf": 10608,
     "sale_date": "Jan 2026",
     "price": 3924960,
-    "psf": 370.0,
+    "psf": 370,
     "note": "2001 · 18' clear · owner-user"
    }
   ],
@@ -281,7 +281,7 @@
     "rent_psf_mo": 1.2,
     "vacancy_pct": 5,
     "cap_low": 5.5,
-    "cap_high": 6.0
+    "cap_high": 6
    },
    "reconciled": {
     "low": 8060000,
@@ -355,7 +355,7 @@
     "sf": 10608,
     "sale_date": "Jan 2026",
     "price": 3924960,
-    "psf": 370.0,
+    "psf": 370,
     "note": "2001 · 18' clear · owner-user"
    },
    {
@@ -373,7 +373,7 @@
     "sf": 37440,
     "sale_date": "May 2026",
     "price": 8424000,
-    "psf": 225.0,
+    "psf": 225,
     "note": "1973 · 24' clear · investor"
    }
   ]
@@ -408,7 +408,7 @@
     "rent_psf_mo": 1.1,
     "vacancy_pct": 5,
     "cap_low": 5.5,
-    "cap_high": 6.0
+    "cap_high": 6
    },
    "reconciled": {
     "low": 9110000,
@@ -482,7 +482,7 @@
     "sf": 10608,
     "sale_date": "Jan 2026",
     "price": 3924960,
-    "psf": 370.0,
+    "psf": 370,
     "note": "2001 · 18' clear · owner-user"
    },
    {
@@ -500,8 +500,135 @@
     "sf": 37440,
     "sale_date": "May 2026",
     "price": 8424000,
-    "psf": 225.0,
+    "psf": 225,
     "note": "1973 · 24' clear · investor"
+   }
+  ]
+ },
+ "47D6SX": {
+  "address": "700 Columbia Ave",
+  "city": "Riverside",
+  "state": "CA",
+  "zip": "92507",
+  "submarket": "Riverside — Hunter Park / I-215 corridor",
+  "specs": {
+   "rba": 35987,
+   "type": "Warehouse",
+   "built": 2003,
+   "clear": "Single-story warehouse",
+   "loading": "Dock + grade-level loading",
+   "power": "±2.13-acre parcel · Hunter Park submarket · minutes to SR-60 & I-215",
+   "tenancy": "Owner-occupied"
+  },
+  "subject_note": "2003 · Warehouse · Owner-occupied",
+  "valuation": {
+   "sales": {
+    "low": 8816815,
+    "high": 9176685,
+    "psf_low": 245,
+    "psf_high": 255,
+    "note": "Based on 2003-vintage construction — the newest product in this size band — + scarce owner-user supply in Riverside's Hunter Park submarket"
+   },
+   "income": {
+    "low": 7520000,
+    "high": 8200000,
+    "rent_psf_mo": 1.1,
+    "vacancy_pct": 5,
+    "cap_low": 5.5,
+    "cap_high": 6
+   },
+   "reconciled": {
+    "low": 8200000,
+    "high": 9176685
+   },
+   "owner_user_premium": 1100000
+  },
+  "hold": {
+   "purchased": "April 2012",
+   "basis_psf": 65,
+   "years": 14.3
+  },
+  "position": "You bought this building in the spring of 2012, while the market was still finding its footing, at a basis of ±$65 per square foot — and you did it the smart way: your own operation under your own roof in Riverside's Hunter Park. Fourteen years later, the same square footage trades at well over three times that number, and your building holds a card most of the competition can't match: 2003 construction — the newest product in this size band anywhere in the submarket — on a ±2.13-acre parcel with direct access to the SR-60 and I-215. The owner-users and investors hunting for modern, sub-40,000 SF warehouse space in Riverside have almost nowhere to look, and that scarcity is your leverage. Because you both own and occupy, every option is on the table: sell into that demand at the top of the range, capture the equity through a sale-leaseback while your operation stays exactly where it is, or trade up to a larger facility timed so you never miss a day of business. Whichever direction you choose, the equity is already there — the only question is when and how you capture it.",
+  "aerial": "/v/aerials/47D6SX.jpg",
+  "comps_source": "C&W / CoStar verified sales, Inland Empire 10k–100k SF, trailing 18 months (July 2026 set)",
+  "equity": {
+   "purchase_date": "April 2012",
+   "purchase_psf": 65,
+   "purchase_total": 2339155,
+   "hold_years": 14.3
+  },
+  "comps": [
+   {
+    "address": "7633 Cypress Ave.",
+    "city": "Riverside",
+    "sf": 20606,
+    "sale_date": "Jun 2026",
+    "price": 4400000,
+    "psf": 213.53,
+    "note": "1990 · 16' clear · owner-user"
+   },
+   {
+    "address": "4200 Garner Rd.",
+    "city": "Riverside",
+    "sf": 37440,
+    "sale_date": "May 2026",
+    "price": 8424000,
+    "psf": 225,
+    "note": "1973 · 24' clear · investor"
+   },
+   {
+    "address": "255 Glider Cir.",
+    "city": "Corona",
+    "sf": 17767,
+    "sale_date": "Apr 2026",
+    "price": 5300000,
+    "psf": 298.31,
+    "note": "1999 · 18' clear"
+   },
+   {
+    "address": "1215 Graphite Dr.",
+    "city": "Corona",
+    "sf": 10608,
+    "sale_date": "Jan 2026",
+    "price": 3924960,
+    "psf": 370,
+    "note": "2001 · 18' clear · owner-user"
+   },
+   {
+    "address": "221 Corporate Terrace St.",
+    "city": "Corona",
+    "sf": 24932,
+    "sale_date": "Jan 2026",
+    "price": 6950000,
+    "psf": 278.76,
+    "note": "1988 · 20' clear · owner-user"
+   },
+   {
+    "address": "13581 Fifth St.",
+    "city": "Chino",
+    "sf": 27107,
+    "sale_date": "Apr 2026",
+    "price": 7319600,
+    "psf": 270.03,
+    "note": "1988 · 24' clear · owner-user"
+   },
+   {
+    "address": "2160 S. Hellman Ave.",
+    "city": "Ontario",
+    "sf": 18469,
+    "sale_date": "Jun 2026",
+    "price": 5700000,
+    "psf": 308.63,
+    "note": "1987 · 20' clear · owner-user"
+   },
+   {
+    "address": "960 Grevillea Ct.",
+    "city": "Ontario",
+    "sf": 25335,
+    "sale_date": "Jan 2026",
+    "price": 7700000,
+    "psf": 303.93,
+    "note": "1989 · 22' clear · owner-user"
    }
   ]
  }
