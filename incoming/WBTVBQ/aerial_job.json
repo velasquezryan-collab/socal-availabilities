@@ -1,0 +1,10 @@
+{
+  "code": "WBTVBQ",
+  "epsg": 2229,
+  "zoom": 19,
+  "parcel_query_url": "https://maps.sbcounty.gov/arcgis/rest/services/Hosted/Parcels/FeatureServer/0/query?geometry=6773466.3,1856496.4&geometryType=esriGeometryPoint&inSR=2229&spatialRel=esriSpatialRelIntersects&outFields=apn&returnGeometry=true&outSR=2229&f=json",
+  "quality": 88,
+  "outputs": [
+    {"w_ft": 920.0, "h_ft": 511.1, "fx": 0.5, "fy": 0.5, "path": "v/aerials/WBTVBQ.jpg", "w": 3375, "h": 1875}
+  ]
+}
