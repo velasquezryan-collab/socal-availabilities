@@ -1,0 +1,14 @@
+{
+ "code": "RQ2WTZ",
+ "epsg": 2230,
+ "zoom": 21,
+ "parcel_query_url": "https://gis.countyofriverside.us/arcgis/rest/services/plus/plus_mSrvc_data_prod/MapServer/18/query?where=SITUS_FULL_ADDRESS+LIKE+%271099+W+LA+CADENA%25%27&outFields=APN&outSR=2230&f=json",
+ "card_frame": {
+  "w_ft": 1476,
+  "h_ft": 820,
+  "fx": 0.74,
+  "fy": 0.36
+ },
+ "qr_url": "https://www.iesmallbay.com/v/RQ2WTZ",
+ "pdf_path": "artwork/Week04_RQ2WTZ_Click2Mail.pdf"
+}
