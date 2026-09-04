@@ -1,0 +1,14 @@
+{
+ "code": "47D6SX",
+ "epsg": 2230,
+ "zoom": 20,
+ "parcel_query_url": "https://gis.countyofriverside.us/arcgis/rest/services/plus/plus_mSrvc_data_prod/MapServer/18/query?where=SITUS_FULL_ADDRESS+LIKE+%27700+COLUMBIA%25%27&outFields=APN&outSR=2230&f=json",
+ "card_frame": {
+  "w_ft": 1800,
+  "h_ft": 1000,
+  "fx": 0.72,
+  "fy": 0.38
+ },
+ "qr_url": "https://www.iesmallbay.com/v/47D6SX",
+ "pdf_path": "artwork/Week10_47D6SX_Click2Mail.pdf"
+}
