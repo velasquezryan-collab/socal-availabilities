@@ -1,0 +1,129 @@
+{
+ "RQ2WTZ": {
+  "address": "1099 W La Cadena Dr",
+  "city": "Riverside",
+  "state": "CA",
+  "zip": "92501",
+  "submarket": "Riverside/Northside",
+  "specs": {
+   "rba": 36388,
+   "type": "Warehouse",
+   "built": 1983,
+   "clear": "Single-story concrete/masonry",
+   "loading": "Dock + grade-level loading",
+   "power": "±2.67-acre lot · excess yard + parking",
+   "tenancy": "Owner-occupied"
+  },
+  "subject_note": "1983 · Warehouse · owner-occupied",
+  "valuation": {
+   "sales": {
+    "low": 8920000,
+    "high": 9280000,
+    "psf_low": 245,
+    "psf_high": 255,
+    "note": "Based on I-215 frontage + excess yard"
+   },
+   "income": {
+    "low": 7610000,
+    "high": 8300000,
+    "rent_psf_mo": 1.1,
+    "vacancy_pct": 5,
+    "cap_low": 5.5,
+    "cap_high": 6.0
+   },
+   "reconciled": {
+    "low": 8300000,
+    "high": 9280000
+   },
+   "owner_user_premium": 1140000
+  },
+  "hold": {
+   "purchased": "July 2001",
+   "basis_psf": 53,
+   "years": 25.0
+  },
+  "position": "Twenty-five years of ownership have put you in a position most sellers never see: a freeway-visible Riverside infill building carried at a 2001 basis, in a market where owner-user buildings of this size rarely trade. As the owner and the occupant you hold every option — a straight sale into a supply-constrained owner-user market, a sale-leaseback that unlocks your equity while your operation stays in place, or a relocation strategy timed to your business, not to the market. And with ±2.67 acres under the building, the excess paved yard and parking give a buyer flexibility this submarket rarely delivers.",
+  "aerial": "/v/aerials/RQ2WTZ.jpg",
+  "comps_source": "C&W / CoStar verified sales, Inland Empire 10k–100k SF, trailing 18 months (July 2026 set)",
+  "equity": {
+   "purchase_date": "July 2001",
+   "purchase_psf": 53,
+   "purchase_total": 1930000,
+   "hold_years": 25.0
+  },
+  "comps": [
+   {
+    "address": "7633 Cypress Ave.",
+    "city": "Riverside",
+    "sf": 20606,
+    "sale_date": "Jun 2026",
+    "price": 4400000,
+    "psf": 213.53,
+    "note": "1990 · 16' clear · owner-user"
+   },
+   {
+    "address": "4200 Garner Rd.",
+    "city": "Riverside",
+    "sf": 37440,
+    "sale_date": "May 2026",
+    "price": 8424000,
+    "psf": 225.0,
+    "note": "1973 · 24' clear · investor"
+   },
+   {
+    "address": "221 Corporate Terrace St.",
+    "city": "Corona",
+    "sf": 24932,
+    "sale_date": "Jan 2026",
+    "price": 6950000,
+    "psf": 278.76,
+    "note": "1988 · 20' clear · owner-user"
+   },
+   {
+    "address": "255 Glider Cir.",
+    "city": "Corona",
+    "sf": 17767,
+    "sale_date": "Apr 2026",
+    "price": 5300000,
+    "psf": 298.31,
+    "note": "1999 · 18' clear"
+   },
+   {
+    "address": "2160 S. Hellman Ave.",
+    "city": "Ontario",
+    "sf": 18469,
+    "sale_date": "Jun 2026",
+    "price": 5700000,
+    "psf": 308.63,
+    "note": "1987 · 20' clear · owner-user"
+   },
+   {
+    "address": "960 Grevillea Ct.",
+    "city": "Ontario",
+    "sf": 25335,
+    "sale_date": "Jan 2026",
+    "price": 7700000,
+    "psf": 303.93,
+    "note": "1989 · 22' clear · owner-user"
+   },
+   {
+    "address": "13581 Fifth St.",
+    "city": "Chino",
+    "sf": 27107,
+    "sale_date": "Apr 2026",
+    "price": 7319600,
+    "psf": 270.03,
+    "note": "1988 · 24' clear · owner-user"
+   },
+   {
+    "address": "1215 Graphite Dr.",
+    "city": "Corona",
+    "sf": 10608,
+    "sale_date": "Jan 2026",
+    "price": 3924960,
+    "psf": 370.0,
+    "note": "2001 · 18' clear · owner-user"
+   }
+  ]
+ }
+}
