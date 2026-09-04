@@ -1,0 +1,129 @@
+{
+ "WBTVBQ": {
+  "address": "787 W Mill St",
+  "city": "San Bernardino",
+  "state": "CA",
+  "zip": "92410",
+  "submarket": "San Bernardino — Mill St / I-215 corridor",
+  "specs": {
+   "rba": 32560,
+   "type": "Warehouse",
+   "built": 1989,
+   "clear": "Single-story warehouse",
+   "loading": "Dock + grade-level loading",
+   "power": "±1.38-acre parcel · fenced yard · at the I-215/Mill St interchange",
+   "tenancy": "Tenant-occupied"
+  },
+  "subject_note": "1989 · Warehouse · leased investment",
+  "valuation": {
+   "sales": {
+    "low": 6186400,
+    "high": 6512000,
+    "psf_low": 190,
+    "psf_high": 200,
+    "note": "Based on I-215 exposure at the Mill St interchange + tight owner-user supply"
+   },
+   "income": {
+    "low": 4570000.0,
+    "high": 4950000.0,
+    "rent_psf_mo": 0.8,
+    "vacancy_pct": 5,
+    "cap_low": 6.0,
+    "cap_high": 6.5
+   },
+   "reconciled": {
+    "low": 6186400,
+    "high": 6512000
+   },
+   "owner_user_premium": 450000
+  },
+  "hold": {
+   "purchased": "January 2013",
+   "basis_psf": 37,
+   "years": 13.6
+  },
+  "position": "You bought this building in 2013, near the bottom of the cycle, at a basis of ±$37 per square foot — and the market has spent thirteen years proving you right. Today the same square footage trades at five times that number, and your building carries an advantage most of the competition can't match: it sits at the I-215/Mill St interchange, with tens of thousands of cars a day passing a building that never has to advertise its location. Sub-35,000 SF freeway-adjacent warehouses almost never come to market in central San Bernardino, and the owner-users and investors who need one have nowhere else to look. That scarcity is your leverage, and you hold every option an investor wants: sell into that demand at the top of the range, exchange into a larger or more passive asset through a 1031, or simply hold and mark the rent to today's market. Whichever direction you choose, the equity is already there — the only question is when and how you capture it.",
+  "aerial": "/v/aerials/WBTVBQ.jpg",
+  "comps_source": "C&W / CoStar verified sales, Inland Empire 10k–100k SF, trailing 18 months (July 2026 set)",
+  "equity": {
+   "purchase_date": "January 2013",
+   "purchase_psf": 37,
+   "purchase_total": 1200000,
+   "hold_years": 13.6
+  },
+  "comps": [
+   {
+    "address": "7633 Cypress Ave.",
+    "city": "Riverside",
+    "sf": 20606,
+    "sale_date": "Jun 2026",
+    "price": 4400000,
+    "psf": 213.53,
+    "note": "1990 · 16' clear · owner-user"
+   },
+   {
+    "address": "4200 Garner Rd.",
+    "city": "Riverside",
+    "sf": 37440,
+    "sale_date": "May 2026",
+    "price": 8424000,
+    "psf": 225.0,
+    "note": "1973 · 24' clear · investor"
+   },
+   {
+    "address": "13581 Fifth St.",
+    "city": "Chino",
+    "sf": 27107,
+    "sale_date": "Apr 2026",
+    "price": 7319600,
+    "psf": 270.03,
+    "note": "1988 · 24' clear · owner-user"
+   },
+   {
+    "address": "221 Corporate Terrace St.",
+    "city": "Corona",
+    "sf": 24932,
+    "sale_date": "Jan 2026",
+    "price": 6950000,
+    "psf": 278.76,
+    "note": "1988 · 20' clear · owner-user"
+   },
+   {
+    "address": "255 Glider Cir.",
+    "city": "Corona",
+    "sf": 17767,
+    "sale_date": "Apr 2026",
+    "price": 5300000,
+    "psf": 298.31,
+    "note": "1999 · 18' clear"
+   },
+   {
+    "address": "2160 S. Hellman Ave.",
+    "city": "Ontario",
+    "sf": 18469,
+    "sale_date": "Jun 2026",
+    "price": 5700000,
+    "psf": 308.63,
+    "note": "1987 · 20' clear · owner-user"
+   },
+   {
+    "address": "960 Grevillea Ct.",
+    "city": "Ontario",
+    "sf": 25335,
+    "sale_date": "Jan 2026",
+    "price": 7700000,
+    "psf": 303.93,
+    "note": "1989 · 22' clear · owner-user"
+   },
+   {
+    "address": "1215 Graphite Dr.",
+    "city": "Corona",
+    "sf": 10608,
+    "sale_date": "Jan 2026",
+    "price": 3924960,
+    "psf": 370.0,
+    "note": "2001 · 18' clear · owner-user"
+   }
+  ]
+ }
+}
