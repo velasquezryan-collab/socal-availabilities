@@ -1,0 +1,168 @@
+name: Build postcards
+# IE BOV pipeline — renders the Click2Mail 6x11 postcard PDF ON THE RUNNER so the
+# artwork is born with a repo URL and nobody ever ferries a file. A cloud session
+# commits (via Zapier, all small text):
+#   incoming/<CODE>/postcard_job.json
+#   incoming/<CODE>/postcard_front_px.html   (Wk-2-style card sources; reference
+#   incoming/<CODE>/postcard_back_px.html     assets/montserrat.woff2, assets/
+#                                             cw_logo_white_red.png, aerial_card.jpg, qr.png)
+# This workflow stitches the card aerial (Esri tiles + county parcel outline),
+# generates the QR, renders front/back at 3375x1875 via headless Chromium, decodes
+# both QRs as a self-check, assembles the 810x450pt PDF, and commits it to pdf_path.
+#
+# postcard_job.json format:
+# {
+#   "code": "47D6SX",
+#   "epsg": 2230,                        // 2230 Riverside Co, 2229 SB Co
+#   "zoom": 20,                          // max REAL Esri zoom (probe first)
+#   "parcel_query_url": "https://...",   // ArcGIS feature JSON w/ rings in epsg
+#   "card_frame": {"w_ft":1800,"h_ft":1000,"fx":0.72,"fy":0.38},
+#   "qr_url": "https://www.iesmallbay.com/v/47D6SX",
+#   "pdf_path": "artwork/Week10_47D6SX_Click2Mail.pdf"
+# }
+
+on:
+  push:
+    paths:
+      - 'incoming/**/postcard_job.json'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libzbar0
+          pip install --quiet pillow pyproj qrcode img2pdf pyzbar playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Build postcards
+        run: |
+          python3 << 'PYEOF'
+          import io, json, os, glob, shutil, subprocess, sys, re, urllib.request
+          from concurrent.futures import ThreadPoolExecutor
+          from PIL import Image, ImageDraw
+          from pyproj import Transformer
+          import qrcode
+          from pyzbar.pyzbar import decode as qr_decode
+          from playwright.sync_api import sync_playwright
+
+          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
+          ORIGIN = 20037508.342787
+
+          def fetch(url):
+              return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60).read()
+
+          jobs = glob.glob('incoming/*/postcard_job.json')
+          if not jobs:
+              print('no postcard jobs found'); sys.exit(0)
+
+          for jobfile in jobs:
+              jobdir = os.path.dirname(jobfile)
+              job = json.load(open(jobfile))
+              code = job['code']
+              print(f'=== building postcard {code} from {jobfile} ===')
+              build = f'/tmp/build_{code}'
+              os.makedirs(build + '/assets', exist_ok=True)
+
+              # brand assets: logo from the repo checkout, Montserrat from Google Fonts (latin block)
+              shutil.copy('v/assets/cw_logo_white_red.png', build + '/assets/cw_logo_white_red.png')
+              css = fetch('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap').decode()
+              blocks = re.findall(r'/\* (\w+) \*/\s*@font-face\s*{([^}]*)}', css)
+              woff = [re.search(r'url\((https://[^)]+woff2)\)', b).group(1) for n, b in blocks if n == 'latin'][0]
+              open(build + '/assets/montserrat.woff2', 'wb').write(fetch(woff))
+
+              # card aerial: Esri stitch + county parcel outline at the job's frame
+              feat = json.loads(fetch(job['parcel_query_url']))
+              rings = feat['features'][0]['geometry']['rings']
+              xs = [p[0] for r in rings for p in r]; ys = [p[1] for r in rings for p in r]
+              pcx, pcy = (min(xs)+max(xs))/2, (min(ys)+max(ys))/2
+              tr = Transformer.from_crs(job['epsg'], 3857, always_xy=True)
+              Z = job['zoom']; RES = 2*ORIGIN/(256*2**Z)
+
+              def get(rc):
+                  r, c = rc
+                  u = f"https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{Z}/{r}/{c}"
+                  for attempt in range(3):
+                      try: return rc, fetch(u)
+                      except Exception:
+                          if attempt == 2: raise
+
+              f = job['card_frame']
+              W_ft, H_ft, fx, fy = f['w_ft'], f['h_ft'], f['fx'], f['fy']
+              x0 = pcx - fx*W_ft; x1 = x0 + W_ft
+              y1 = pcy + fy*H_ft; y0 = y1 - H_ft
+              mx0, my0 = tr.transform(x0, y0); mx1, my1 = tr.transform(x1, y1)
+              c0 = int((mx0+ORIGIN)//(RES*256)); c1 = int((mx1+ORIGIN)//(RES*256))
+              r0 = int((ORIGIN-my1)//(RES*256)); r1 = int((ORIGIN-my0)//(RES*256))
+              tiles = [(r, c) for r in range(r0, r1+1) for c in range(c0, c1+1)]
+              print(f'card aerial: {len(tiles)} tiles @ z{Z}')
+              im = Image.new("RGB", (256*(c1-c0+1), 256*(r1-r0+1)))
+              with ThreadPoolExecutor(max_workers=16) as ex:
+                  for (r, c), data in ex.map(get, tiles):
+                      im.paste(Image.open(io.BytesIO(data)).convert("RGB"), (256*(c-c0), 256*(r-r0)))
+              px0 = (mx0-(c0*RES*256-ORIGIN))/RES; px1 = (mx1-(c0*RES*256-ORIGIN))/RES
+              py0 = ((ORIGIN-r0*256*RES)-my1)/RES; py1 = ((ORIGIN-r0*256*RES)-my0)/RES
+              crop = im.crop((int(px0), int(py0), int(px1), int(py1)))
+              up = crop.resize((3375, 1875), Image.LANCZOS)
+              sx = 3375/crop.size[0]; sy = 1875/crop.size[1]
+              draw = ImageDraw.Draw(up)
+              for fill, width in [((255,255,255), 22), ((237,28,43), 12)]:
+                  for ring in rings:
+                      pts = []
+                      for vx, vy in ring:
+                          gx, gy = tr.transform(vx, vy)
+                          pts.append((((gx-mx0)/RES)*sx, ((my1-gy)/RES)*sy))
+                      draw.line(pts, fill=fill, width=width, joint="curve")
+              up.save(build + '/aerial_card.jpg', quality=92)
+
+              # QR (same params as the drafting sessions)
+              q = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=20, border=2)
+              q.add_data(job['qr_url']); q.make(fit=True)
+              q.make_image(fill_color='#1D1740', back_color='white').save(build + '/qr.png')
+
+              shutil.copy(jobdir + '/postcard_front_px.html', build + '/postcard_front_px.html')
+              shutil.copy(jobdir + '/postcard_back_px.html', build + '/postcard_back_px.html')
+
+              with sync_playwright() as p:
+                  b = p.chromium.launch()
+                  pg = b.new_page(viewport={'width': 3375, 'height': 1875})
+                  for side in ('front', 'back'):
+                      pg.goto(f'file://{build}/postcard_{side}_px.html')
+                      pg.wait_for_timeout(2000)
+                      pg.screenshot(path=f'{build}/{side}.png')
+                  b.close()
+
+              # self-check: both QRs must decode to qr_url
+              for side in ('front', 'back'):
+                  res = qr_decode(Image.open(f'{build}/{side}.png'))
+                  vals = [r.data.decode() for r in res]
+                  assert job['qr_url'] in vals, f'{side} QR decode failed: {vals}'
+              print('QR self-check passed')
+
+              os.makedirs(os.path.dirname(job['pdf_path']), exist_ok=True)
+              subprocess.run(['img2pdf', f'{build}/front.png', f'{build}/back.png',
+                              '--pagesize', '810ptx450pt', '-o', job['pdf_path']], check=True)
+              print('wrote', job['pdf_path'], os.path.getsize(job['pdf_path']), 'bytes')
+
+              for fn in ('postcard_job.json', 'postcard_front_px.html', 'postcard_back_px.html'):
+                  fp = os.path.join(jobdir, fn)
+                  if os.path.exists(fp): os.remove(fp)
+          PYEOF
+
+      - name: Commit results
+        run: |
+          git config user.name "postcard-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Build postcard PDFs from job tickets [skip ci]"
+          git push
