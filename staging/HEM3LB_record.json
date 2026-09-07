@@ -1,0 +1,65 @@
+{
+ "HEM3LB": {
+  "address": "1455 E San Bernardino Ave",
+  "city": "San Bernardino",
+  "state": "CA",
+  "zip": "92408",
+  "submarket": "San Bernardino — inland industrial core",
+  "specs": {
+   "rba": 39750,
+   "type": "Manufacturing",
+   "built": 1979,
+   "clear": "Single-story manufacturing building",
+   "loading": "Dock + grade-level loading",
+   "power": "±2.64-acre parcel · fenced yard · trailer parking",
+   "tenancy": "Tenant-occupied"
+  },
+  "subject_note": "1979 · Manufacturing · leased investment",
+  "valuation": {
+   "sales": {
+    "low": 8148750,
+    "high": 8546250,
+    "psf_low": 205,
+    "psf_high": 215,
+    "note": "Based on excess yard + tight owner-user supply"
+   },
+   "income": {
+    "low": 7550000,
+    "high": 8240000,
+    "rent_psf_mo": 1.0,
+    "vacancy_pct": 5,
+    "cap_low": 5.5,
+    "cap_high": 6.0
+   },
+   "reconciled": {
+    "low": 8240000,
+    "high": 8546250
+   },
+   "owner_user_premium": 450000
+  },
+  "hold": {
+   "purchased": "February 2014",
+   "basis_psf": 50,
+   "years": 12.4
+  },
+  "position": "You bought this building in early 2014 at a basis of ±$50 per square foot, and the Inland Empire has spent the twelve years since proving that decision right — the same square footage now trades at four times that number. Your advantage is the land: nearly two acres of fenced yard and trailer parking wrapped around a ±39,750 SF manufacturing plant, in a market where excess yard has become one of the scarcest and most-paid-for features a building can have. The owner-users and investors hunting for functional manufacturing space with room to operate have very few options in central San Bernardino, and that scarcity is your leverage. You hold every option an investor wants: sell into that demand at the top of the range, exchange into a larger or more passive asset through a 1031, or simply hold and mark the rent to today's market. Whichever direction you choose, the equity is already there — the only question is when and how you capture it.",
+  "aerial": "/v/aerials/HEM3LB.jpg",
+  "comps_source": "C&W / CoStar verified sales, Inland Empire 10k–100k SF, trailing 18 months (July 2026 set)",
+  "equity": {
+   "purchase_date": "February 2014",
+   "purchase_psf": 50,
+   "purchase_total": 2000000,
+   "hold_years": 12.4
+  },
+  "comps": [
+   {"address": "7633 Cypress Ave.", "city": "Riverside", "sf": 20606, "sale_date": "Jun 2026", "price": 4400000, "psf": 213.53, "note": "1990 · 16' clear · owner-user"},
+   {"address": "4200 Garner Rd.", "city": "Riverside", "sf": 37440, "sale_date": "May 2026", "price": 8424000, "psf": 225.0, "note": "1973 · 24' clear · investor"},
+   {"address": "13581 Fifth St.", "city": "Chino", "sf": 27107, "sale_date": "Apr 2026", "price": 7319600, "psf": 270.03, "note": "1988 · 24' clear · owner-user"},
+   {"address": "221 Corporate Terrace St.", "city": "Corona", "sf": 24932, "sale_date": "Jan 2026", "price": 6950000, "psf": 278.76, "note": "1988 · 20' clear · owner-user"},
+   {"address": "255 Glider Cir.", "city": "Corona", "sf": 17767, "sale_date": "Apr 2026", "price": 5300000, "psf": 298.31, "note": "1999 · 18' clear"},
+   {"address": "2160 S. Hellman Ave.", "city": "Ontario", "sf": 18469, "sale_date": "Jun 2026", "price": 5700000, "psf": 308.63, "note": "1987 · 20' clear · owner-user"},
+   {"address": "960 Grevillea Ct.", "city": "Ontario", "sf": 25335, "sale_date": "Jan 2026", "price": 7700000, "psf": 303.93, "note": "1989 · 22' clear · owner-user"},
+   {"address": "1215 Graphite Dr.", "city": "Corona", "sf": 10608, "sale_date": "Jan 2026", "price": 3924960, "psf": 370.0, "note": "2001 · 18' clear · owner-user"}
+  ]
+ }
+}
